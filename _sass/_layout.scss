@@ -78,15 +78,25 @@ footer {
     width: 100%;
 }
 
+.announce {
+    margin-top:10px;
+    margin-bottom:60px;
+    text-align: center;
+
+}
+
 
 .pack {
-
-
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
+}
+
+.banner {
+    display: block;
+    margin: auto;
 }
 
 .panel-container {
