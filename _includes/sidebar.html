@@ -9,15 +9,17 @@
 
 
     <div class="mt10 recent">
-        <h3>Recent Labs</h3>
+        <h3>Call to action:</h3>
         <ul>
-            {% for post in site.posts limit:3 %}
 
             <li>
-                <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small></p>
+                <img src="{{site.baseurl}}/images/slack.png" width="250px" alt=""/> <p>Join the docker community on Slack!. Connect ideas and as questions with your peers - <a href=" https://community.docker.com/registrations/groups/4316">Regiser here</a></p>
+            </li>
+            <li>
+                <img src="{{site.baseurl}}/images/dockercon.jpg" alt="Dockercon"/> 
+                <p>Register for DockerCon!. -  http://2017.dockercon.com/</p>
             </li>
 
-            {% endfor %}
         </ul>
     </div>
 
