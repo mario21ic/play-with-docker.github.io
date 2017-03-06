@@ -126,8 +126,3 @@ Which of these can you do with Docker Swarm Mode?
 - [x] list all service
 - [x] scale up the number of replicas of a service
 - [x] take a node out of the swarm
-
-{:.quiz}
-True or false?
-- (x) True
-- ( ) False
