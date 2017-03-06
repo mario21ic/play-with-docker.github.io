@@ -3,7 +3,7 @@ layout: post
 title:  "Docker containers"
 date:   2017-01-20 12:00:00 +0100
 author: "@lucjuggery"
-tags: [docker, labs]
+tags: [docker, labs,linux,beginner,developer,operations]
 ---
 Let's play with Docker containers !
 
