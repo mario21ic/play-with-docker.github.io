@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Docker registry"
+title:  "Docker registry quick and easy"
 date:   2017-01-22
 author: "@lucjuggery"
 tags: [docker, labs,linux,intermediate,operations,developer]
 img: "docker-registry.png"
 ---
 
-# Using Docker Open Source Registry
+# Docker Registry Quick and Easy
 
 In this lab, we will put into practice what we saw regarding the open source version of the Docker Registry. This one is available as an official image on the Docker Hub.
 
