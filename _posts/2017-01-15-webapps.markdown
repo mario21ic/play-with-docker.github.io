@@ -474,5 +474,38 @@ Here's a quick summary of the few basic commands we used in our Dockerfile.
 
 >**Note:** If you want to learn more about Dockerfiles, check out [Best practices for writing Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/).
 
-## Next Steps
-For the next step in the tutorial head over to [3.0 Run a multi-container app with Docker Compose](./votingapp.md)
+{:.quiz}
+What command starts a container from the command line?
+{:.quiz}
+- ( ) docker build
+- ( ) docker ps
+- (x) docker run
+- ( ) docker container
+
+{:.quiz}
+How do you get a list of running containers?
+{:.quiz}
+- (x) docker container ls
+- ( ) docker list containers
+- ( ) docker run
+
+{:.quiz}
+True or False: Docker only runs Python containers
+( ) True
+(X) False
+
+{:.quiz}
+Which of the following is a Dockerfile command?
+- [x] RUN
+- [ ] DOCKER
+- [x] CMD
+- [x] COPY
+- [x] FROM
+- [ ] INDEX
+
+{:.quiz}
+What is the first command in every Dockerfile?
+- ( ) RUN
+- ( ) INDEX
+- (x) FROM
+

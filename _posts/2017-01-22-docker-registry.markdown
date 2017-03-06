@@ -13,7 +13,7 @@ In this lab, we will put into practice what we saw regarding the open source ver
 
 ## Launch a container based on the official Docker Registry image
 
-We will use the official **registry** image available on the Docker Hub. We need to use the version 2 as the 1 is deprecated.
+We will use the official **registry** image available on the Docker Hub. We need to use the version 2 as 1 is deprecated.
 
 ```.term1
 docker container run -d -p 5000:5000 registry:2

@@ -170,3 +170,14 @@ Remove the breakpoint and detach the debugger by clicking the stop button. Go ba
 ![Animated image of browser without error](../images/attach.png "Animated image of browser without error")
 
 And that's it, you're done!
+
+
+{:.quiz}
+True or false: You have to restart a container after you make changes to the code or they won't be reflected in the application
+- ( ) True
+- (x) False
+
+{:.quiz}
+True or false: Debugging a Java app running in a container requires a special plugin for the IDE
+- ( ) True
+- (x) False
