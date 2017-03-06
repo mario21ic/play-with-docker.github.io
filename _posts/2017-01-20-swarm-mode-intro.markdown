@@ -117,3 +117,17 @@ docker node update --availability active node2
 ```.term1
 docker node inspect node2 --pretty
 ```
+
+{:.quiz}
+Which of these can you do with Docker Swarm Mode?
+- [x] add a node
+- [x] start a service
+- [x] end a service
+- [x] list all service
+- [x] scale up the number of replicas of a service
+- [x] take a node out of the swarm
+
+{:.quiz}
+True or false?
+- (x) True
+- ( ) False

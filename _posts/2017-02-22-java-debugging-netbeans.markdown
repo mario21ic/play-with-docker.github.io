@@ -135,3 +135,13 @@ Set a breakpoint in UserServiceImpl on the findByLogin method. Press `F11` or cl
 Continue (`F5`) and you should successfully log in.
 
 ![](../images/app_debug_success.png)
+
+{:.quiz}
+True or false: You have to restart a container after you make changes to the code or they won't be reflected in the application
+- ( ) True
+- (x) False
+
+{:.quiz}
+True or false: Debugging a Java app running in a container requires a special plugin for the IDE
+- ( ) True
+- (x) False

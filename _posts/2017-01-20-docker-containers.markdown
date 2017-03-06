@@ -23,19 +23,19 @@ You should get an output like the following that shows Docker Engine (Server) an
 
 ```
 Client:
- Version:      1.13.0
- API version:  1.25
- Go version:   go1.7.3
- Git commit:   49bf474
- Built:        Wed Jan 18 16:20:26 2017
- OS/Arch:      linux/amd64
+ Version:      17.03.0-ce
+ API version:  1.26
+ Go version:   go1.7.5
+ Git commit:   60ccb22
+ Built:        Thu Feb 23 10:40:59 2017
+ OS/Arch:      darwin/amd64
 
 Server:
- Version:      1.13.0
- API version:  1.25 (minimum version 1.12)
- Go version:   go1.7.3
- Git commit:   49bf474
- Built:        Wed Jan 18 16:20:26 2017
+ Version:      17.03.0-ce
+ API version:  1.26 (minimum version 1.12)
+ Go version:   go1.7.5
+ Git commit:   3a232c8
+ Built:        Tue Feb 28 07:52:04 2017
  OS/Arch:      linux/amd64
  Experimental: true
 ```
@@ -336,3 +336,15 @@ docker container ls -a
 ## What we seen in this lab
 
 We have started to play with containers and to understand the container layer, the read-write layer that is added to each container that is ran. We also started to play with the container API and the commands used the most (run, exec, ls, rm, inspect).
+
+{:.quiz}
+Which command helps you access the commandline on a running container?
+- ( ) docker container ls
+- ( ) docker inspect
+- ( ) you can't access the commandline of a running container
+- (x) docker exec
+
+{:.quiz}
+True or false: Once a container stops it is removed from the system?
+( ) True
+(x) False

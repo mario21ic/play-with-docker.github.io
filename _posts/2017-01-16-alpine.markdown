@@ -14,7 +14,9 @@ To get started, let's run the following in our terminal:
 docker image pull alpine
 ```
 
-The `pull` command fetches the alpine **image** from the **Docker registry** and saves it in our system. You can use the `docker images` command to see a list of all images on your system.
+The `pull` command fetches the alpine **image** from the **Docker registry** and saves it in our system. In this case the registry is the **[Docker Hub](https://hub.docker.com)**. You can change the registry, but that's a different lab.
+
+You can use the `docker image` command to see a list of all images on your system.
 
 ```.term1
 docker image ls
@@ -25,7 +27,7 @@ alpine                 latest              c51f86c28340        4 weeks ago      
 hello-world             latest              690ed74de00f        5 months ago        960 B
 ```
 
-### 1.1 Docker Run
+### 1.1 Docker Container Run
 Great! Let's now run a Docker **container** based on this image. To do that you are going to use the `docker container run` command.
 
 ```.term1
@@ -108,5 +110,15 @@ In the last section, you saw a lot of Docker-specific jargon which might be conf
 - *Docker client* - The command line tool that allows the user to interact with the Docker daemon.
 - *Docker Hub* - A [registry](https://hub.docker.com/explore/) of Docker images. You can think of the registry as a directory of all available Docker images. You'll be using this later in this tutorial.
 
-## Next Steps
-For the next step in the tutorial, head over to [2.0 Webapps with Docker](../webapps)-
+{:.quiz}
+Where do images get pulled from by default?
+- ( ) Docker Registry
+- ( ) Something you have set up on your machine
+- ( ) There is no default
+- (x) Docker Hub
+
+{:.quiz}
+Which command lists your Docker images?
+- (x) docker image ls
+- ( ) docker run
+- ( ) docker container ls
