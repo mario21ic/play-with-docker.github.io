@@ -3,7 +3,7 @@ layout: post
 title:  "WebApps"
 date:   2017-01-15 10:51:47 +0530
 categories: webapps
-tags: [docker, webapp]
+tags: [docker, webapp,beginner,linux,developer]
 ---
 ## 2.0 Webapps with Docker
 Great! So you have now looked at `docker run`, played with a Docker container and also got the hang of some terminology. Armed with all this knowledge, you are now ready to get to the real stuff &#8212; deploying web applications with Docker.

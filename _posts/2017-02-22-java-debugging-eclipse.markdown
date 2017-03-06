@@ -2,7 +2,7 @@
 layout: post
 title:  "In-container Java Development: Eclipse"
 author: "@manomarks"
-tags: [docker, labs, desktop]
+tags: [docker, labs, desktop,linux,windows,intermediate,developer]
 ---
 
 **Note: This tutorial requires you to run your app locally on your own computer**

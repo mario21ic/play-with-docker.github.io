@@ -3,7 +3,7 @@ layout: post
 title: "Docker compose with swarm secrets"
 date:   2017-02-14 10:51:47 +0530
 author: "@marcosnils"
-tags: [docker, compose, swarm secrets]
+tags: [docker, compose, swarm secrets,developer,operations,beginner,linux]
 categories: docker
 img: "docker-secrets.png"
 ---

@@ -3,7 +3,7 @@ layout: post
 title:  "Docker registry"
 date:   2017-01-22
 author: "@lucjuggery"
-tags: [docker, labs]
+tags: [docker, labs,linux,intermediate,operations,developer]
 img: "docker-registry.png"
 ---
 
