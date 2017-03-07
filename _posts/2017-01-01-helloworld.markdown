@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hellow World"
+title:  "Hello World"
 date:   2017-01-17
 tags: [linux,developer,operations]
 categories: beginner
