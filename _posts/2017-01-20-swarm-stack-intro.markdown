@@ -3,8 +3,8 @@ layout: post
 title: "Swarm stack introduction"
 date:   2017-01-20 23:35:00 +0100
 author: "@lucj"
-tags: [docker, swarm,linux,operations,beginner]
-categories: docker
+tags: [docker, swarm,linux,operations]
+categories: beginner
 img: "compose_swarm.png"
 terms: 2
 ---

@@ -3,7 +3,8 @@ layout: post
 title:  "Docker registry quick and easy"
 date:   2017-01-22
 author: "@lucjuggery"
-tags: [docker, labs,linux,intermediate,operations,developer]
+tags: [docker, labs,linux,operations,developer]
+categories: intermediate
 img: "docker-registry.png"
 ---
 

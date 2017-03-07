@@ -3,7 +3,8 @@ layout: post
 title:  "Windows Containers Basics"
 date:   2017-03-6
 author: "@manomarks"
-tags: [docker, labs,windows,intermediate,operations,developer]
+tags: [docker, labs,windows,operations,developer]
+categories: intermediate
 ---
 
 ## Getting Started with Windows Containers
