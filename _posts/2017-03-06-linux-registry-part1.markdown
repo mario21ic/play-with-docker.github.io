@@ -21,7 +21,7 @@ You'll learn how to:
 
 - generate encrypted passwords (using Docker!) and run an authenticated, secure local registry over HTTPS with basic auth.
 
-> Note. The open-source registry does not have a Web UI, so there's no friendly interface like [Docker Hub](https://hub.docker.com) or [Docker Store](https://store.docker.com). Instead there is a [REST API](https://docs.docker.com/registry/spec/api/) you can use to query the registry. For a local registry which has a Web UI and role-based access control, Docker, Inc. has the [Trusted Registry](https://www.docker.com/sites/default/files/Docker%20Trusted%20Registry.pdf) product.
+> Note. The open-source registry does not have a Web UI, so there's no interface like [Docker Hub](https://hub.docker.com) or [Docker Store](https://store.docker.com). Instead there is a [REST API](https://docs.docker.com/registry/spec/api/) you can use to query the registry. For a local registry which has a Web UI and role-based access control, Docker, Inc. has the [Trusted Registry](https://www.docker.com/sites/default/files/Docker%20Trusted%20Registry.pdf) product.
 
 You'll need Docker running on in this tutorial, or on a Linux machine and be familiar with the key Docker concepts, and with Docker volumes:
 
@@ -35,22 +35,28 @@ Docker expects all registries to run on HTTPS. The next section of this lab will
 ```
 http: server gave HTTP response to HTTPS client
 ```
-The Docker Engine needs to be explicitly setup to use HTTP for the insecure registry. Edit or create `/etc/docker/docker` file: 
+The Docker Engine needs to be explicitly setup to use HTTP for the insecure registry. For this sample it has already been done, `127.0.0.1:5000` has already been added to the daemon.
+
+*** Running on your own Linux machine instead of in this browser window ***
+Edit or create `/etc/docker/docker` file: 
 ```
 vi /etc/docker/docker
 
 # add this line
-DOCKER_OPTS="--insecure-registry localhost:5000"
+DOCKER_OPTS="--insecure-registry 127.0.0.1:5000"
 ```
 Close and save the file, then restart the docker daemon.
 ```
 service docker restart
 ```
+
+*** If you're running on your own Mac or Windows machine instead of in this browser window ***
 In Docker for Mac, the `Preferences` menu lets you set the address for an insecure registry under the `Daemon` panel:
 ![MacOS menu](/images/docker_osx_insecure_registry.png)
 
 In Docker for Windows, the `Settings` menu lets you set the address for an insecure registry under the `Daemon` panel:
 ![MacOS menu](/images/docker_windows_insecure_registry.png)
+
 ## Testing the Registry Image
 First we'll test that the registry image is working correctly, by running it without any special configuration:
 ```.term1
@@ -69,37 +75,33 @@ docker pull hello-world
 
 If a tag isn't specified, then the default `latest` is used. If a registry hostname isn't specified then the default `docker.io` for Docker Hub is used. If you want to use images with any other registry, you need to explicitly specify the hostname - the default is always Docker Hub, you can't change to a different default registry.
 
-With a local registry, the hostname and the custom port used by the registry is the full registry address, e.g. `localhost:5000`. 
+With a local registry, the hostname and the custom port used by the registry is the full registry address, e.g. `127.0.0.1:5000`. In this sample we'll just be using `127.0.0.1:5000` as that's already been added to the daemon.
 
-```.term1
-hostname
-```
 ## Pushing and Pulling from the Local Registry
 
 Docker uses the hostname from the full image name to determine which registry to use. We can build images and include the local registry hostname in the image tag, or use the `docker tag` command to add a new tag to an existing image.
 
-These commands pull a public image from Docker Hub, tag it for use in the private registry with the full name `localhost:5000/hello-world`, and then push it to the registry:
+These commands pull a public image from Docker Hub, tag it for use in the private registry with the full name `127.0.0.1:5000/hello-world`, and then push it to the registry:
 
 ```.term1
-docker pull hello-world
-docker tag hello-world localhost:5000/hello-world
-docker push localhost:5000/hello-world
+docker tag hello-world 127.0.0.1:5000/hello-world
+docker push 127.0.0.1:5000/hello-world
 ```
 
 When you push the image to your local registry, you'll see similar output to when you push a public image to the Hub:
 
 ```
-The push refers to a repository [localhost:5000/hello-world]
+The push refers to a repository [127.0.0.1:5000/hello-world]
 a55ad2cda2bf: Pushed
 cfbe7916c207: Pushed
 fe4c16cbf7a4: Pushed
 latest: digest: sha256:79e028398829da5ce98799e733bf04ac2ee39979b238e4b358e321ec549da5d6 size: 948
 ```
-On the local machine, you can remove the new image tag and the original image, and pull it again from the local registry to verify it was correctly stored:
+On your machine, you can remove the new image tag and the original image, and pull it again from the local registry to verify it was correctly stored:
 ```.term1
-docker rmi localhost:5000/hello-world
+docker rmi 127.0.0.1:5000/hello-world
 docker rmi hello-world
-docker pull localhost:5000/hello-world
+docker pull 127.0.0.1:5000/hello-world
 ```
 That exercise shows the registry works correctly, but at the moment it's not very useful because all the image data is stored in the container's writable storage area, which will be lost when the container is removed. To store the data outside of the container, we need to mount a host directory when we start the container.
 
@@ -114,28 +116,14 @@ In this example, the new container will use a host-mounted Docker volume. When t
 Create the registry:
 ```.term1
 mkdir registry-data
-docker run -d -p 5000:5000 --name registry -v `pwd`/registry-data:/var/lib/registry registry
+docker run -d -p 5000:5000 --name registry -v $(pwd)/registry-data:/var/lib/registry registry
 ```
 Tag and push the container with the new IP address of the registry.
 ```.term1
-docker tag hello-world localhost:5000/hello-world
-docker push localhost:5000/hellow-world
+docker pull hello-world
+docker tag hello-world 127.0.0.1:5000/hello-world
+docker push 127.0.0.1:5000/hello-world
 ```
-Repeating the previous `docker push` command uploads an image to the registry container, and the layers will be stored in the container's `/var/lib/registry` directory, which is actually mapped to the `$(pwd)/registry-data` directory on you local machine. The `tree` command will show the directory structure the registry server uses:
+Repeating the previous `docker push` command uploads an image to the registry container, and the layers will be stored in the container's `/var/lib/registry` directory, which is actually mapped to the `$(pwd)/registry-data` directory on your machine. Storing data outside of the container means we can build a new version of the registry image and replace the old container with a new one using the same host mapping - so the new registry container has all the images stored by the previous container.
 
-```.term1
-tree registry-data
-.
-|____docker
-| |____registry
-| | |____v2
-| | | |____blobs
-| | | | |____sha256
-| | | | | |____1f
-| | | | | | |____1fad42e8a0d9781677d366b1100defcadbe653280300cf62a23e07eb5e9d3a41
-
-...
-```
-Storing data outside of the container means we can build a new version of the registry image and replace the old container with a new one using the same host mapping - so the new registry container has all the images stored by the previous container.
-
-Using an insecure registry also isn't practical in multi-user scenarios. Effectively there's no security so anyone can push and pull images if they know the registry hostname. The registry server supports authentication, but only over a secure SSL connection. We'll run a secure version of the registry server in a container next.
+Using an insecure registry isn't practical in multi-user scenarios. Effectively there's no security so anyone can push and pull images if they know the registry hostname. The registry server supports authentication, but only over a secure SSL connection. We'll run a secure version of the registry server in a container next.
