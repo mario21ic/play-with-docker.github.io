@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Docker registry for Linux Part 2"
+title:  "Docker registry for Linux Parts 2 & 3"
 date:   2017-03-6
 author: "@manomarks"
 tags: [docker, labs,linux,intermediate,operations,developer]
