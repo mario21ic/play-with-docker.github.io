@@ -3,7 +3,7 @@ layout: post
 title:  "Docker registry for Linux Part 1"
 date:   2017-03-6
 author: "@manomarks"
-tags: [docker, labs,linux,operations,developer]
+tags: [linux,operations,developer]
 categories: intermediate
 img: "docker-registry.png"
 ---

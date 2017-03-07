@@ -2,7 +2,7 @@
 layout: post
 title:  "Docker volumes"
 author: "@lucjuggery"
-tags: [docker, labs,linux,developer,operations]
+tags: [linux,developer,operations]
 categories: beginner
 ---
 

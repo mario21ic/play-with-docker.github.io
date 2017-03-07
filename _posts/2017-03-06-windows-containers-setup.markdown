@@ -3,7 +3,7 @@ layout: post
 title:  "Windows Containers Setup"
 date:   2017-03-6
 author: "@manomarks"
-tags: [docker, labs,windows,operations,developer]
+tags: [windows,operations,developer]
 categories: intermediate
 ---
 

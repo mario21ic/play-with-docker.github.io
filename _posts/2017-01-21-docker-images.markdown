@@ -4,7 +4,7 @@ title:  "Docker images"
 date:   2017-01-21
 author: "@lucjuggery"
 img: "docker-image.png"
-tags: [docker, labs,developer,operations,linux]
+tags: [developer,operations,linux]
 categories: beginner
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "In-container Java Development: Eclipse"
 author: "@manomarks"
-tags: [docker, labs, desktop,linux,windows,developer]
+tags: [desktop,linux,windows,developer]
 categories: intermediate
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Live Debugging Node.js with Docker"
 author: "@manomarks"
-tags: [docker, labs, desktop,linux,windows,developer]
+tags: [desktop,linux,windows,developer]
 categories: intermediate
 ---
 

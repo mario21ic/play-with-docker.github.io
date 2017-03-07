@@ -3,7 +3,7 @@ layout: post
 title: "Swarm mode introduction"
 date:   2017-01-20 10:51:47 +0530
 author: "@marcosnils"
-tags: [docker, swarm,linux,operations]
+tags: [swarm,linux,operations]
 categories: beginner
 img: "swarm.jpg"
 terms: 2
