@@ -16,7 +16,7 @@
   }
 
 
-  // Process recaptcha input ant inits SDK
+  // Process recaptcha input and inits SDK
   var verifyCallback = function(response) {
     var self = this;
     var data = encodeURIComponent('g-recaptcha-response') + '=' + encodeURIComponent(response);
@@ -47,11 +47,15 @@
     //Register captcha only on the first term to avoid showing multiple times
     var term = window.pwd.terms[0];
     var els = document.querySelectorAll(term.selector);
-    for (var n=0; n < els.length; ++n) {
-      var captcha = document.createElement('div');
-      captcha.className = 'captcha';
-      els[n].appendChild(captcha);
-      window.grecaptcha.render(captcha, {'sitekey': '6Ld8pREUAAAAAOkrGItiEeczO9Tfi99sIHoMvFA_', 'callback': verifyCallback.bind(window.pwd)});
+    if (els.length==0) {
+      document.getElementById('left-panel').style.width="100%";
+    }
+      for (var n=0; n < els.length; ++n) {
+        var captcha = document.createElement('div');
+        captcha.className = 'captcha';
+        els[n].appendChild(captcha);
+        window.grecaptcha.render(captcha, {'sitekey': '6Ld8pREUAAAAAOkrGItiEeczO9Tfi99sIHoMvFA_', 'callback': verifyCallback.bind(window.pwd)});
+      
     }
   };
 

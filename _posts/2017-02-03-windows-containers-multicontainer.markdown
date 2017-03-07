@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Windows Containers Multi-Container Applications"
-date:   2017-03-6
+date:   2017-02-03
 author: "@manomarks"
 tags: [windows,operations,developer]
 categories: intermediate
+terms: 0
 ---
 
 ## Multi-Container Applications

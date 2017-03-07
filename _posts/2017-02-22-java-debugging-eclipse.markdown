@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "In-container Java Development: Eclipse"
+date:   2017-02-22
 author: "@manomarks"
 tags: [desktop,linux,windows,developer]
 categories: intermediate
+terms: 0
 ---
 
 **Note: This tutorial requires you to run your app locally on your own computer**

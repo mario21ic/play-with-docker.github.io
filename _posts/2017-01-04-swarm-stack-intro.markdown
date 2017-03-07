@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Swarm stack introduction"
-date:   2017-01-20 23:35:00 +0100
+date:   2017-01-04
 author: "@lucj"
 tags: [swarm,linux,operations]
 categories: beginner
