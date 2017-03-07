@@ -33,7 +33,7 @@ layout: page
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
       <li>
         {{ post.title }}
-      <small class="post-date">{{ post.date | date_to_string }}</small>
+        <small class="post-date">({% for tag in post.tags %}{{ tag | capitalize | append: ' ' }}{% endfor %})</small>
       </li>
       </a>
       {% endfor %}
