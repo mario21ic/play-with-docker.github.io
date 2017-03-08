@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Swarm mode introduction"
-date:   2017-01-20 10:51:47 +0530
+date:   2017-01-08
 author: "@marcosnils"
 tags: [swarm,linux,operations]
 categories: beginner

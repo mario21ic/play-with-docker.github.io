@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "WebApps"
-date:   2017-01-15 10:51:47 +0530
+title:  "Simple Web App"
+date:   2017-01-03
 categories: beginner
 tags: [webapp,linux,developer]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Docker containers"
-date:   2017-01-20 12:00:00 +0100
+title:  "Docker containers deeper dive"
+date:   2017-01-06
 author: "@lucjuggery"
 tags: [linux,developer,operations]
 categories: beginner

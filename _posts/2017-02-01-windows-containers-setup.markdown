@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Windows Containers Setup"
-date:   2017-03-6
+date:   2017-02-01
 author: "@manomarks"
 tags: [windows,operations,developer]
 categories: intermediate
+terms: 0
 ---
 
 # Setup
