@@ -3,7 +3,7 @@ layout: post
 title:  "In-container Java Development: Eclipse"
 date:   2017-02-22
 author: "@manomarks"
-tags: [desktop,linux,windows,developer]
+tags: [desktop,linux,windows,developer,java]
 categories: intermediate
 terms: 0
 ---

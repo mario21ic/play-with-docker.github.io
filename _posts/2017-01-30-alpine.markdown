@@ -3,7 +3,7 @@ layout: post
 title:  "First Alpine Linux Container"
 date:   2017-01-30
 categories: beginner
-tags: [alpine,linux,operations,developer]
+tags: [linux,operations,developer]
 ---
 ## 1.0 Running your first container
 Now that you have everything setup, it's time to get our hands dirty. In this section, you are going to run an [Alpine Linux](http://www.alpinelinux.org/) container (a lightweight linux distribution) on your system and get a taste of the `docker container run` command.
