@@ -36,7 +36,7 @@ docker-compose -f .\docker-compose.windows.yml up
 To access the running app from the host running the containers (for example when running on Windows 10 or if opening browser on Windows Server 2016 system running Docker engine) use the container IP and port 5000. `localhost` will not work:
 
 ```
-docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" musicstore_web_1
+docker inspect -f "\{\{ .NetworkSettings.Networks.nat.IPAddress \}\}" musicstore_web_1
 172.21.124.54
 ```
 
