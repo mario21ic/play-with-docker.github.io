@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Hello World"
-date:   2017-01-01
-tags: [linux,developer,operations]
+date:   2017-01-31
+tags: [developer,operations]
 categories: beginner
 ---
 ## Prerequisites

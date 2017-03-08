@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Docker registry for Linux Parts 2 & 3"
-date:   2017-02-05
+date:   2017-02-27
 author: "@manomarks"
 tags: [linux,operations,developer]
 categories: intermediate

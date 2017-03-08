@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Setup and Run Docker Data Center"
+date:   2017-02-03
+author: "@manomarks"
+tags: [linux,operations,enterprise]
+categories: intermediate
+terms: 1
+---
+
+```
+docker run --rm -it --name ucp -v /var/run/docker.sock:/var/run/docker.sock docker/ucp:2.1.0 install --host-address <node-ip-address> --interactive
+```

@@ -3,7 +3,7 @@ layout: post
 title:  "Live Debugging Node.js with Docker"
 date:   2017-02-22
 author: "@manomarks"
-tags: [desktop,linux,windows,developer]
+tags: [desktop,linux,windows,developer,nodejs]
 categories: intermediate
 terms: 0
 ---

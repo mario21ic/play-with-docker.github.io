@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Windows Containers Basics"
-date:   2017-02-02
+date:   2017-01-21
 author: "@manomarks"
 tags: [windows,operations,developer]
 categories: intermediate
