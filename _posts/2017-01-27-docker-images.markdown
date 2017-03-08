@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Docker images deeper dive"
-date:   2017-01-05
+date:   2017-01-27
 author: "@lucjuggery"
 img: "docker-image.png"
 tags: [developer,operations,linux]
