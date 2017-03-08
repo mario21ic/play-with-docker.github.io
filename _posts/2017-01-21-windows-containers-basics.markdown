@@ -4,7 +4,7 @@ title:  "Windows Containers Basics"
 date:   2017-01-21
 author: "@manomarks"
 tags: [windows,operations,developer]
-categories: intermediate
+categories: beginner
 terms: 0
 ---
 

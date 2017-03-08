@@ -4,7 +4,7 @@ title:  "Windows Containers Setup"
 date:   2017-01-22
 author: "@manomarks"
 tags: [windows,operations,developer]
-categories: intermediate
+categories: beginner
 terms: 0
 ---
 
