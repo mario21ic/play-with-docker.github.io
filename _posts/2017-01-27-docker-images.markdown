@@ -235,7 +235,7 @@ We will not go into all the details now but it's interesing to see an example of
 Let's get the list of layers (only one for alpine)
 
 ```.term1
-docker container inspect --format "{{ "{{ json .RootFS.Layers "}}}}" alpine | python -m json.tool
+docker image inspect --format "{{ "{{ json .RootFS.Layers "}}}}" alpine | python -m json.tool
 ```
 
 ```
@@ -247,7 +247,7 @@ docker container inspect --format "{{ "{{ json .RootFS.Layers "}}}}" alpine | py
 Let's try another example to query only the Architecture information
 
 ```.term1
-docker container inspect --format "{{ "{{ .Architecture "}}}}" alpine
+docker image inspect --format "{{ "{{ .Architecture "}}}}" alpine
 ```
 
 This should return **amd64**.
