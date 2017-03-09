@@ -181,6 +181,6 @@ True or false: You have to restart a container after you make changes to the cod
 - (x) False
 
 {:.quiz}
-True or false: Debugging a Java app running in a container requires a special plugin for the IDE
+True or false: Debugging a NodeJS app running in a container requires a special plugin for the IDE
 - ( ) True
 - (x) False
