@@ -18,7 +18,7 @@ Then we will focus on the image creation using a Dockerfile. We will then see ho
 Let's start by running an interactive shell in a ubuntu container.
 
 ```.term1
-docker run -ti ubuntu bash
+docker container run -ti ubuntu bash
 ```
 
 As we've done in the previous lab, we will install the figlet package in this container.
@@ -235,7 +235,7 @@ We will not go into all the details now but it's interesing to see an example of
 Let's get the list of layers (only one for alpine)
 
 ```.term1
-docker inspect --format "{{ "{{ json .RootFS.Layers "}}}}" alpine | python -m json.tool
+docker container inspect --format "{{ "{{ json .RootFS.Layers "}}}}" alpine | python -m json.tool
 ```
 
 ```
@@ -247,7 +247,7 @@ docker inspect --format "{{ "{{ json .RootFS.Layers "}}}}" alpine | python -m js
 Let's try another example to query only the Architecture information
 
 ```.term1
-docker inspect --format "{{ "{{ .Architecture "}}}}" alpine
+docker container inspect --format "{{ "{{ .Architecture "}}}}" alpine
 ```
 
 This should return **amd64**.

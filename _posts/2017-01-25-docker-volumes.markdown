@@ -189,7 +189,7 @@ docker container run --name c3 -d -v /data alpine sh -c 'ping 8.8.8.8 > /data/pi
 Let's inspect the container and get the **Mounts** key using the Go template notation.
 
 ```.term1
-docker inspect -f "{{ "{{ json .Mounts "}}}}" c3 | python -m json.tool
+docker container inspect -f "{{ "{{ json .Mounts "}}}}" c3 | python -m json.tool
 ```
 
 We have pretty much the same output as we had when we defined the volume in the Dockerfile.
@@ -284,7 +284,7 @@ We can now use this volume and mount it on a specific path of a container. We wi
 Note: /usr/share/nginx/html is the default folder served by nginx. It contains 2 files: index.html and 50x.html
 
 ```.term1
-docker run --name www -d -p 8080:80 -v html:/usr/share/nginx/html nginx
+docker container run --name www -d -p 8080:80 -v html:/usr/share/nginx/html nginx
 ```
 
 Note: we use the -p option to map the nginx default port (80) to a port on the host (8080). We will come back to this in the lesson dedicated to the networking.

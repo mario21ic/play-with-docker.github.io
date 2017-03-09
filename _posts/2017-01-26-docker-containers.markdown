@@ -296,7 +296,7 @@ docker container exec -ti CONTAINER_ID
 Verify figlet is present in this container.
 
 ```.term1
-figet still there !
+figlet still there !
 ```
 
 If you get the funny output, everything is fine.
@@ -341,9 +341,9 @@ We have started to play with containers and to understand the container layer, t
 {:.quiz}
 Which command helps you access the commandline on a running container?
 - ( ) docker container ls
-- ( ) docker inspect
+- ( ) docker container inspect
 - ( ) you can't access the commandline of a running container
-- (x) docker exec
+- (x) docker container exec
 
 {:.quiz}
 True or false: Once a container stops it is removed from the system?

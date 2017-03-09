@@ -6,7 +6,7 @@ categories: beginner
 tags: [linux,developer]
 ---
 ## 2.0 Webapps with Docker
-Great! So you have now looked at `docker run`, played with a Docker container and also got the hang of some terminology. Armed with all this knowledge, you are now ready to get to the real stuff &#8212; deploying web applications with Docker.
+Great! So you have now looked at `docker container run`, played with a Docker container and also got the hang of some terminology. Armed with all this knowledge, you are now ready to get to the real stuff &#8212; deploying web applications with Docker.
 
 ### 2.1 Run a static website in a container
 >**Note:** Code for this section is in this repo in the [static-site directory](https://github.com/docker/labs/tree/master/beginner/static-site).
@@ -68,10 +68,10 @@ In the above command:
 * `--name` allows you to specify a container name
 * `AUTHOR` is the environment variable name and `Your Name` is the value that you can pass
 
-Now you can see the ports by running the `docker port` command.
+Now you can see the ports by running the `docker container port` command.
 
 ```.term1
-docker port static-site
+docker container port static-site
 ```
 ```
 443/tcp -> 0.0.0.0:32772
@@ -477,9 +477,9 @@ Here's a quick summary of the few basic commands we used in our Dockerfile.
 {:.quiz}
 What command starts a container from the command line?
 {:.quiz}
-- ( ) docker build
-- ( ) docker ps
-- (x) docker run
+- ( ) docker image build
+- ( ) docker container ps
+- (x) docker container run
 - ( ) docker container
 
 {:.quiz}
