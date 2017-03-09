@@ -19,8 +19,22 @@ img {
     margin-top: 10px;
 }
 
+.mb10 {
+    margin-bottom: 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body > * {
+    flex: none;
+}
+
 .navbar {
     border-radius: 0px;
+    margin-bottom: 0px;
 
     &.navbar-inverse {
         background-color: $docker-color;
@@ -131,7 +145,8 @@ footer {
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    height: 82%;
+    height: 100%;
+    flex: auto;
 
     /* avoid browser level touch actions */
     xtouch-action: none;
