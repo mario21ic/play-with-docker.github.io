@@ -2,10 +2,10 @@
 layout: page
 ---
 
-<div class="home container-fluid">
+<div class="home">
  
     <div class="row">
-        <div class="col-md-offset-1 col-md-11">
+        <div class="col-md-12">
              <div class="row pack">
 
                 <img class="banner" src="{{site.baseurl}}/images/{{site.banner}}" alt="banner"/>
@@ -31,12 +31,12 @@ layout: page
     <h2 id="{{ cat[0] | slugify }}">{{ cat[0] | capitalize }}</h2>
     <ul class="tags-expo-posts">
       {% for post in cat[1] %}
-        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
       <li>
-        {{ post.title }}
-        <small class="post-date">({% for tag in post.tags %}{{ tag | capitalize | append: ' ' }}{% endfor %})</small>
+        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+          <small class="post-date">({% for tag in post.tags %}{{ tag | capitalize | append: ' ' }}{% endfor %})</small>
+        </a>
       </li>
-      </a>
       {% endfor %}
     </ul>
     {% endfor %}
